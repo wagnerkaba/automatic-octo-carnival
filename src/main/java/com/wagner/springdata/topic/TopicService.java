@@ -19,6 +19,9 @@ public class TopicService {
 
         List<Topic> topics = new ArrayList<>();
         topicRepository.findAll().forEach(topics::add);
+
+
+
         return topics;
     }
 
