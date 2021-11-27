@@ -50,4 +50,9 @@ public class TopicService {
 
         topicRepository.deleteById(id);
     }
+
+    public List<Topic> getTopicByName(String name) {
+
+        return topicRepository.findByName(name);
+    }
 }

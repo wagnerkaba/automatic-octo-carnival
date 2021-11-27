@@ -35,6 +35,8 @@ public class TopicController {
         return topicService.getAllTopics();
     }
 
+
+
     // Colocar id entre chaves ({id}) diz ao spring que se trata de uma variavel
     @RequestMapping("/topics/{id}")
     // @PathVariable diz ao spring que o parâmetro id = {id}
@@ -61,6 +63,12 @@ public class TopicController {
     public void deleteTopic(@PathVariable String id){
 
         topicService.deleteTopíc(id);
+
+    }
+
+    @RequestMapping("/topics/name/{name}")
+    public List<Topic> getTopicByName(@PathVariable String name){
+        return topicService.getTopicByName(name);
 
     }
 
